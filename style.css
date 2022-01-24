@@ -1,0 +1,110 @@
+:root {
+    --main-raduse: 5px;
+    --main-padding: 5px;
+}
+
+body {
+    background-image: url("pattern.png");
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "sidbar main main main"
+        "sidbar content1 content2 content3"
+        "sidbar footer footer footer"
+    ;
+    grid-gap: 0.2rem;
+}
+
+nav {
+    grid-area: nav;
+    background-color: aqua;
+    border-radius: var(--main-raduse);
+    padding: var(--main-padding);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+main {
+    grid-area: main;
+    background-color: aquamarine;
+    border-radius: var(--main-raduse);
+    padding: var(--main-padding);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sidbar {
+    grid-area: sidbar;
+    background-color: cadetblue;
+    border-radius: var(--main-raduse);
+    padding: var(--main-padding);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.content1 {
+    grid-area: content1;
+    background-color: burlywood;
+    border-radius: var(--main-raduse);
+    padding: var(--main-padding);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.content2 {
+    grid-area: content2;
+    background-color: burlywood;
+    border-radius: var(--main-raduse);
+    padding: var(--main-padding);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.content3 {
+    grid-area: content3;
+    background-color: burlywood;
+    border-radius: var(--main-raduse);
+    padding: var(--main-padding);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: darkgrey;
+    border-radius: var(--main-raduse);
+    padding: var(--main-padding);
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "nav"
+            "sidbar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer"
+        ;
+    }
+}
